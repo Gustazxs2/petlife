@@ -38,12 +38,12 @@ export default function Agendamento() {
     carregarAgendamentos(usuarioConvertido.email);
   }, [router]);
 
-  async function carregarAgendamentos(email: string) {
+  async function carregarAgendamentos(email: string) {  
     try {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "https://petshop-backend-eu7k.onrender.com/agendamentos",
+        `${process.env.NEXT_PUBLIC_API_URL}/agendamento`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ export default function Agendamento() {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "https://petshop-backend-eu7k.onrender.com/agendamentos",
+        `${process.env.NEXT_PUBLIC_API_URL}/agendamentos`,
         {
           method: "POST",
           headers: {

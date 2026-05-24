@@ -18,7 +18,7 @@ export default function Produtos() {
   useEffect(() => {
     async function carregarProdutos() {
       const resposta = await fetch(
-        "https://petshop-backend-eu7k.onrender.com/produtos"
+        `${process.env.NEXT_PUBLIC_API_URL}/produtos`
       );
 
       const dados = await resposta.json();

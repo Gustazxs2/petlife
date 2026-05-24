@@ -44,7 +44,7 @@ export default function UsuarioPage() {
 
   async function carregarAgendamentos(email: string) {
     const resposta = await fetch(
-      "https://petshop-backend-eu7k.onrender.com/agendamentos"
+      `${process.env.NEXT_PUBLIC_API_URL}/agendamentos`
     );
 
     const dados = await resposta.json();
