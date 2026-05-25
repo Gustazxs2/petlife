@@ -1,10 +1,12 @@
 # PetLife
 
 # Desenvolvido por
-  - Gustavo brioso
-  - Rafael queiroz
-  - Josué filho
-  
+  - Gustavo Felipe de Oliveira Brioso
+  - Rafael Eduardo Queiroz da silveira
+  - Cayo Ramon Lima da silva
+  - Marcelo Henrique
+  - Josué Elias de Melo Filho
+  - Cláudio Henrique Beltrão Araujo
 
 
 Sistema fullstack para gerenciamento de petshop desenvolvido com Next.js, Node.js, Express e PostgreSQL.
