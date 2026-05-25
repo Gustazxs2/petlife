@@ -46,7 +46,7 @@ async function criarProdutosPadrao() {
         preco: 39.9,
         descricao: "Coleira confortável e resistente para passeios.",
         imagem:
-          "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=600&q=80",
+          "https://plus.unsplash.com/premium_photo-1692392181661-96c4b34759db?auto=format&fit=crop&w=600&q=80",
       },
 
       {
