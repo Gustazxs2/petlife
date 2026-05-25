@@ -7,6 +7,7 @@
   - Marcelo Henrique
   - Josué Elias de Melo Filho
   - Cláudio Henrique Beltrão Araujo
+  - André Luiz Gomes Menezes
 
 
 Sistema fullstack para gerenciamento de petshop desenvolvido com Next.js, Node.js, Express e PostgreSQL.
