@@ -11,6 +11,10 @@ function auth(req, res, next) {
 
   const token = authHeader.split(" ")[1];
 
+  console.log(authHeader);
+  console.log(token);
+  console.log(process.env.JWT_SECRET);
+
   try {
     const decoded = jwt.verify(
       token,
