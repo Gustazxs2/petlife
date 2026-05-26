@@ -6,7 +6,14 @@ const auth = require("../middleware/auth");
 
 const {
   criarAgendamento,
+  buscarAgendamentos,
 } = require("../controllers/agendamentoController");
+
+router.get(
+  "/agendamentos",
+  auth,
+  buscarAgendamentos
+);
 
 router.post(
   "/agendamentos",

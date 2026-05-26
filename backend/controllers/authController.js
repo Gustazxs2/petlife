@@ -1,9 +1,9 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+
 const User = require("../models/User");
 
-
-exports.register = async (req,res) => {
+exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
@@ -48,7 +48,7 @@ exports.register = async (req,res) => {
   }
 };
 
-exports.register = async (req, res) => {
+exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -101,17 +101,3 @@ exports.register = async (req, res) => {
     });
   }
 };
-
-app.get("/agendamentos", auth, async (req, res) => {
-  try {
-    const agendamentos = await Agendamento.findAll();
-
-    res.json(agendamentos);
-  } catch (error) {
-    console.log(error);
-
-    res.status(500).json({
-      message: "Erro ao buscar agendamentos.",
-    });
-  }
-});
