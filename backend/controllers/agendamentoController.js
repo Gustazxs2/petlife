@@ -1,6 +1,6 @@
 const Agendamento = require("../models/Agendamento");
 
-exports.buscarAgendamento = async (req, res) => {
+exports.buscarAgendamentos = async (req, res) => {
   try {
     const agendamentos = await Agendamento.findAll();
 

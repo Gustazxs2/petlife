@@ -5,7 +5,7 @@ const router = express.Router();
 const auth = require("../middleware/auth");
 
 const {
-  criarAgendamento,
+  criarAgendamentos,
   buscarAgendamentos,
 } = require("../controllers/agendamentoController");
 
@@ -18,7 +18,7 @@ router.get(
 router.post(
   "/agendamentos",
   auth,
-  criarAgendamento
+  criarAgendamentos
 );
 
 module.exports = router;
