@@ -42,19 +42,26 @@ export default function UsuarioPage() {
     carregarAgendamentos(usuarioConvertido.email);
   }, [router]);
 
-  async function carregarAgendamentos(email: string) {
-    const resposta = await fetch(
-      "https://petshop-backend-eu7k.onrender.com/agendamentos"
-    );
+async function carregarAgendamentos(email: string) {
+  const token = localStorage.getItem("token");
 
-    const dados = await resposta.json();
+  const resposta = await fetch(
+    "https://petshop-backend-eu7k.onrender.com/agendamentos",
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
-    const meusAgendamentos = dados.filter(
-      (item: Agendamento) => item.userEmail === email
-    );
+  const dados = await resposta.json();
 
-    setAgendamentos(meusAgendamentos);
-  }
+  const meusAgendamentos = dados.filter(
+    (item: Agendamento) => item.userEmail === email
+  );
+
+  setAgendamentos(meusAgendamentos);
+}
 
   if (!usuario) {
     return null;
