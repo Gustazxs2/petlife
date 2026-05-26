@@ -56,6 +56,9 @@ async function carregarAgendamentos(email: string) {
 
   const dados = await resposta.json();
 
+  console.log(dados);
+  console.log(email);
+
   const meusAgendamentos = dados.filter(
     (item: Agendamento) => item.userEmail === email
   );
