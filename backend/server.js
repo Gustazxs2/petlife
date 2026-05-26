@@ -1,27 +1,27 @@
 
 const authRoutes = require("./routes/authRoutes");
 
+const produtoRoutes = require("./routes/produtoRoutes");
+
+const agendamentoRoutes = require("./routes/agendamentoRoutes");
 
 const express = require("express");
+
 const cors = require("cors");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+
 require("dotenv").config();
 
 const sequelize = require("./config/database");
 
-const User = require("./models/User");
-const Produto = require("./models/Produto");
-const Agendamento = require("./models/Agendamento");
-
-const auth = require("./middleware/auth");
+const Produto = require("./models/Produto") ;
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-
 app.use(authRoutes);
+app.use(produtoRoutes);
+app.use(agendamentoRoutes);
 
 
 async function criarProdutosPadrao() {
@@ -74,67 +74,6 @@ app.get("/", (req, res) => {
   res.send("API PetLife rodando 🐶");
 });
 
-app.get("/produtos", async (req, res) => {
-  try {
-    const produtos = await Produto.findAll();
-
-    res.json(produtos);
-  } catch (error) {
-    console.log(error);
-
-    res.status(500).json({
-      message: "Erro ao buscar produtos.",
-    });
-  }
-});
-
-
-
-
-
-app.get("/agendamentos", auth, async (req, res) => {
-  try {
-    const agendamentos = await Agendamento.findAll();
-
-    res.json(agendamentos);
-  } catch (error) {
-    console.log(error);
-
-    res.status(500).json({
-      message: "Erro ao buscar agendamentos.",
-    });
-  }
-});
-
-app.post("/agendamentos", auth, async (req, res) => {
-  try {
-    const { nomePet, data, servico, userEmail } = req.body;
-
-    if (!nomePet || !data || !servico || !userEmail) {
-      return res.status(400).json({
-        message: "Todos os campos são obrigatórios.",
-      });
-    }
-
-    const agendamento = await Agendamento.create({
-      nomePet,
-      data,
-      servico,
-      userEmail,
-    });
-
-    res.status(201).json({
-      message: "Agendamento realizado com sucesso!",
-      agendamento,
-    });
-  } catch (error) {
-    console.log(error);
-
-    res.status(500).json({
-      message: "Erro ao criar agendamento.",
-    });
-  }
-});
 
 sequelize
   .sync({ alter: true })
