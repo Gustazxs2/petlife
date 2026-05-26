@@ -43,7 +43,7 @@ export default function Agendamento() {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "https://petshop-backend-eu7k.onrender.com/agendamentos",
+        "https://petlife-1-xsj1.onrender.com/agendamentos",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ export default function Agendamento() {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "https://petshop-backend-eu7k.onrender.com/agendamentos",
+        "https://petlife-1-xsj1.onrender.com/agendamentos",
         {
           method: "POST",
           headers: {

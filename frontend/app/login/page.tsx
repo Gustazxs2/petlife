@@ -11,7 +11,7 @@ export default function Login() {
   async function entrar(e: React.FormEvent) {
     e.preventDefault();
 
-    const resposta = await fetch("https://petshop-backend-eu7k.onrender.com/login", {
+    const resposta = await fetch("https://petlife-1-xsj1.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
