@@ -132,9 +132,18 @@ ORM com Sequelize
 Responsividade
 Organização modular de código
 👨‍💻 Desenvolvedores
-Gustavo Felipe de Oliveira Brioso
-Rafael Eduardo Queiroz da Silveira
-Cayo Ramon Lima da Silva
-Marcelo Henrique
+Gustavo Felipe de Oliveira Brioso.
+
+Rafael Eduardo Queiroz da Silva.
+
+Cayo  Ramon Lima da Silva 
+
+Marcelo Henrique 
+
+josué Elias de Melo Filho 
+
+Cláudio Henrique Beltrão Araújo
+
+André Luiz Gomes Menezes
 📄 Licença
 Este projeto foi desenvolvido para fins acadêmicos.
