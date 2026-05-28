@@ -18,7 +18,7 @@ export default function Produtos() {
   useEffect(() => {
     async function carregarProdutos() {
       const resposta = await fetch(
-        "https://petlife-1-xsj1.onrender.com/produtos"
+        "http://localhost:3002/produtos"
       );
 
       const dados = await resposta.json();

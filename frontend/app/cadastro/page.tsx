@@ -14,7 +14,7 @@ export default function Cadastro() {
   async function cadastrar(e: React.FormEvent) {
     e.preventDefault();
 
-    const resposta = await fetch("https://petlife-1-xsj1.onrender.com/register", {
+    const resposta = await fetch("http://localhost:3001/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
