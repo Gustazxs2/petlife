@@ -46,7 +46,7 @@ async function carregarAgendamentos(email: string) {
   const token = localStorage.getItem("token");
 
   const resposta = await fetch(
-    "http://localhost:3003/agendamentos",
+    "https://petlife-schenduling-service.onrender.com",
     {
       headers: {
         Authorization: `Bearer ${token}`,

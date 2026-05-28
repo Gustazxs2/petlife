@@ -20,7 +20,7 @@ export default function ProdutoDetalhe() {
   useEffect(() => {
     async function carregarProduto() {
       const resposta = await fetch(
-        "http://localhost:3002/produtos"
+        "https://petlife-produtos-services.onrender.comprodutos"
       );
 
       const dados = await resposta.json();

@@ -43,7 +43,7 @@ export default function Agendamento() {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "http://localhost:3003/agendamentos",
+        "https://petlife-schenduling-service.onrender.com",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ export default function Agendamento() {
       const token = localStorage.getItem("token");
 
       const resposta = await fetch(
-        "http://localhost:3003/agendamentos",
+        "",
         {
           method: "POST",
           headers: {
@@ -185,7 +185,7 @@ export default function Agendamento() {
                   >
                     <p className="font-bold text-green-800 dark:text-green-400">
                       {item.nomePet}
-                    </p>
+              https://petlife-schenduling-service.onrender.com      </p>
 
                     <p className="text-gray-600 dark:text-gray-300">
                       Serviço: {item.servico}
