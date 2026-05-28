@@ -1,228 +1,140 @@
-# PetLife
+PETLIFE 🐾
+Sistema fullstack para gerenciamento de petshop desenvolvido com arquitetura baseada em microsserviços, autenticação JWT e interface moderna utilizando Next.js.
 
-link do site: https://petlife-seven-alpha.vercel.app/
+📌 Sobre o Projeto
+O PetLife é uma plataforma desenvolvida com foco em gerenciamento de serviços para petshops, permitindo o controle de:
+autenticação de usuários;
+gerenciamento de produtos;
+agendamentos;
+integração entre frontend e APIs;
+persistência em banco de dados PostgreSQL/Supabase.
+O projeto foi desenvolvido como atividade acadêmica, aplicando conceitos modernos de desenvolvimento web e engenharia de software.
 
-# Desenvolvido por
-  - Gustavo Felipe de Oliveira Brioso
-  - Rafael Eduardo Queiroz da silveira
-  - Cayo Ramon Lima da silva
-  - Marcelo Henrique
-  - Josué Elias de Melo Filho
-  - Cláudio Henrique Beltrão Araujo
-  - André Luiz Gomes Menezes
+🚀 Tecnologias Utilizadas
+Frontend
+Next.js
+React
+TypeScript
+TailwindCSS
+Backend
+Node.js
+Express.js
+JWT Authentication
+Bcrypt
+Sequelize ORM
+Banco de Dados
+PostgreSQL
+Supabase
 
-
-Sistema fullstack para gerenciamento de petshop desenvolvido com Next.js, Node.js, Express e PostgreSQL.
-
-===
-
-# Sobre o projeto
-
-O PetLife foi desenvolvido com o objetivo de digitalizar o gerenciamento de serviços de petshop, permitindo cadastro de usuários, autenticação segura, visualização de produtos e agendamento online de serviços.
-
-O sistema integra frontend, backend e banco de dados relacional através de API REST.
-
-===
-
- # Funcionalidades
-
-. Cadastro de usuários  
-. Login com autenticação JWT  
-. Criptografia de senhas com bcrypt  
-. Catálogo de produtos  
-. Carrinho de compras  
-. Agendamento de serviços  
-. Página de usuário  
-. Integração com PostgreSQL  
-. API REST  
-. Arquitetura modular  
-
-===
-
-# Tecnologias utilizadas
-
-## Frontend
-- Next.js
-- React
-- TypeScript
-- TailwindCSS
-- React Hot Toast
-
-## Backend
-- Node.js
-- Express
-- Sequelize ORM
-- JWT
-- bcryptjs
-- dotenv
-- cors
-
-## Banco de Dados
-- PostgreSQL
-- Supabase
-
-## Deploy
-- Vercel
-- Render
-
-===
-
-#  Arquitetura do sistema
-
-O sistema foi organizado em arquitetura monorepo, separando frontend e backend em módulos independentes.
-
-```txt
+🏗️ Arquitetura do Projeto
+Plain text
 PETLIFE/
+│
 ├── frontend/
-└── backend/
-```
+│
+├── auth-service/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   └── config/
+│
+├── product-service/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   └── config/
+│
+├── scheduling-service/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   └── config/
+│
+└── README.md
+✨ Funcionalidades
+🔐 Autenticação
+Cadastro de usuários
+Login com JWT
+Proteção de rotas
+Criptografia de senha com bcrypt
 
-===
+📦 Produtos
+Cadastro de produtos
+Listagem de produtos
+Atualização de informações
+Exclusão de produtos
 
-# Segurança
+📅 Agendamentos
+Criação de agendamentos
+Controle de serviços
+Organização de horários
 
-O sistema utiliza:
+🌐 Deploy
+Frontend hospedado na Vercel:
+🔗 https://petlife-seven-alpha.vercel.app/⁠�
 
-- JWT para autenticação
-- bcrypt para criptografia de senhas
-- Middleware de proteção de rotas
-- Variáveis de ambiente para dados sensíveis
+⚙️ Instalação
+1. Clone o repositório
+Bash
+git clone https://github.com/seu_usuario/petlife.git
+2. Acesse a pasta do projeto
+Bash
+cd petlife
+🔧 Configuração das Variáveis de Ambiente
+Crie um arquivo .env em cada serviço backend.
+Exemplo:
+Environment
+PORT=3000
 
-===
+DATABASE_URL=your_database_url
 
-# API REST
-
-## Usuários
-
-### Cadastro
-```http
-POST /register
-```
-
-### Login
-```http
-POST /login
-```
-
----
-
-## Produtos
-
-### Listar produtos
-```http
-GET /produtos
-```
-
-===
-
-## Agendamentos
-
-### Criar agendamento
-```http
-POST /agendamentos
-```
-
-### Listar agendamentos
-```http
-GET /agendamentos
-```
-
-===
-
-# Arquitetura baseada em serviços
-
-O backend foi dividido em serviços independentes por domínio de responsabilidade:
-
-## Auth Service
-Responsável por:
-- Login
-- Cadastro
-- JWT
-- Segurança
-
-===
-
-## roduct Service
-Responsável por:
-- Catálogo de produtos
-- Visualização de produtos
-
-===
-
-## Scheduling Service
-Responsável por:
-- Agendamentos
-- Gerenciamento de serviços
-
-===
-
-# Diagramas
-
-## UML de Classes
-- User
-- Produto
-- Agendamento
-
-## Arquitetura
-Frontend → Backend → PostgreSQL
-
-===
-
-# Executando o projeto localmente
-
-## Clone o repositório
-
-```bash
-git clone https://github.com/Gustazxs2/petlife.git
-```
-
-===
-
-# Frontend
-
-```bash
+JWT_SECRET=your_secret_key
+📦 Instalação das Dependências
+Frontend
+Bash
 cd frontend
 npm install
-npm run dev
-```
-
-===
-
-# Backend
-
-```bash
-cd backend
+Auth Service
+Bash
+cd auth-service
 npm install
-npm start
-```
-
-===
-
-#  Variáveis de ambiente
-
-## Backend (.env)
-
-```env
-DATABASE_URL=URL_DO_SUPABASE
-JWT_SECRET=petlife_secret
-```
-
-===
-
-## Frontend (.env.local)
-
-```env
-NEXT_PUBLIC_API_URL=URL_DO_BACKEND_RENDER
-```
-
-===
-
-#  Desenvolvido por
-
-Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web / Arquitetura de Software.
-
-===
-
-#  Licença
-
-Projeto desenvolvido para fins educacionais.
+Product Service
+Bash
+cd product-service
+npm install
+Scheduling Service
+Bash
+cd scheduling-service
+npm install
+▶️ Executando o Projeto
+Frontend
+Bash
+npm run dev
+Backend Services
+Execute em cada serviço:
+Bash
+npm run dev
+🔒 Segurança
+O projeto utiliza:
+autenticação JWT;
+hash de senhas com bcrypt;
+variáveis de ambiente protegidas;
+separação de serviços por responsabilidade.
+📚 Conceitos Aplicados
+Arquitetura em microsserviços
+API REST
+Autenticação e autorização
+Integração frontend/backend
+ORM com Sequelize
+Responsividade
+Organização modular de código
+👨‍💻 Desenvolvedores
+Gustavo Felipe de Oliveira Brioso
+Rafael Eduardo Queiroz da Silveira
+Cayo Ramon Lima da Silva
+Marcelo Henrique
+📄 Licença
+Este projeto foi desenvolvido para fins acadêmicos.
