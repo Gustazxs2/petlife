@@ -73,8 +73,8 @@ Controle de serviços
 Organização de horários
 
 🌐 Deploy
-Frontend hospedado na Vercel:
-🔗 https://petlife-seven-alpha.vercel.app/⁠�
+Frontend hospedado no vercel
+petlife-seven-alpha.vercel.app
 
 ⚙️ Instalação
 1. Clone o repositório
